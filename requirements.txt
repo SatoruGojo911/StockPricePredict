@@ -7,3 +7,4 @@ scikit-learn>=1.2.0  # Ensure version is at least 1.2.0 but accept newer
 streamlit>=1.28.1  # Ensure version is at least 1.13.1 but accept newer
 datetime  # No specific version needed (part of standard library)
 plotly>=5.8.0  # Ensure version is at least 5.8.0 but accept newer
+xgboost 
