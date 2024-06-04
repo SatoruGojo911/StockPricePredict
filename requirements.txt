@@ -1,0 +1,10 @@
+yfinance~=0.1.93  # Get latest compatible version within 0.1.93 major range
+pandas>=1.4.2  # Ensure version is at least 1.4.2 but accept newer
+numpy>=1.23.4  # Ensure version is at least 1.23.4 but accept newer
+matplotlib>=3.6.2  # Ensure version is at least 3.6.2 but accept newer
+seaborn>=0.12.1  # Ensure version is at least 0.12.1 but accept newer
+scikit-learn>=1.2.0  # Ensure version is at least 1.2.0 but accept newer
+streamlit>=1.13.1  # Ensure version is at least 1.13.1 but accept newer
+warnings  # No specific version needed
+datetime  # No specific version needed (part of standard library)
+plotly>=5.8.0  # Ensure version is at least 5.8.0 but accept newer
