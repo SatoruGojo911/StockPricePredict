@@ -1,0 +1,10 @@
+﻿yfinance
+pandas
+numpy
+matplotlib 
+eaborn 
+scikit-learn 
+streamlit 
+warnings 
+datetime 
+plotly
