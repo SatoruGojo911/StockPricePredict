@@ -34,7 +34,7 @@ if (symbol):
 
     # Download the historical data
     stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
-    if(stock_data is None):
+    if(stock_data):
         st.write('ERROR IN LOADING STOCK DETAILS')
     else:
         st.write("Fetching data from {} to {}".format(start_date,end_date))
