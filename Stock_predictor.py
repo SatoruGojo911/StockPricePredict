@@ -32,10 +32,11 @@ if (symbol):
         formatted_date = current_date.strftime("%Y-%m-%d")
         end_date = str(formatted_date)
     
-        # Download the historical data
-        stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
-        
-        st.write("Fetching data from {} to {}".format(start_date,end_date))
+        try:
+          stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
+          st.write("Fetching data from {} to {}".format(start_date, end_date))
+        except (ConnectionError, urllib.error.URLError, yf.DownloadError) as e:
+          st.error(f"Error downloading data: {e}")
         st.write('-'*100)
         # st.write(stock_data.head())
         X = stock_data.drop('Adj Close', axis=1)
