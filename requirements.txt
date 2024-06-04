@@ -1,7 +1,0 @@
-﻿yfinance
-pandas
-numpy
-scikit-learn 
-warnings 
-datetime 
-plotly
