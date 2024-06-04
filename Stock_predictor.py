@@ -23,20 +23,18 @@ st.write('-'*100)
 symbol = st.text_input("Enter the stock symbol you want to predict : ")
 st.write('-'*100)
 if (symbol):
-    stock_symbol = symbol
-    start_date = '2010-01-01'
-    current_date_time = datetime.datetime.now()
+        stock_symbol = symbol
+        start_date = '2010-01-01'
+        current_date_time = datetime.datetime.now()
+        
+        current_date = current_date_time.date()
+        yesterday = current_date - datetime.timedelta(days=1)
+        formatted_date = current_date.strftime("%Y-%m-%d")
+        end_date = str(formatted_date)
     
-    current_date = current_date_time.date()
-    yesterday = current_date - datetime.timedelta(days=1)
-    formatted_date = current_date.strftime("%Y-%m-%d")
-    end_date = str(formatted_date)
-
-    # Download the historical data
-    stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
-    if(stock_data):
-        st.write('ERROR IN LOADING STOCK DETAILS')
-    else:
+        # Download the historical data
+        stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
+        
         st.write("Fetching data from {} to {}".format(start_date,end_date))
         st.write('-'*100)
         # st.write(stock_data.head())
